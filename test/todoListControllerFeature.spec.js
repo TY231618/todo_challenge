@@ -1,0 +1,14 @@
+describe('TodoListController', function() {
+  beforeEach(module('TodoList'));
+
+  var ctrl;
+
+  beforeEach(inject(function($controller) {
+    ctrl = $controller('TodoListController');
+  }));
+
+  it('initialises with an empty search result and term', function() {
+    expect(ctrl.searchResult).toBeUndefined();
+    expect(ctrl.searchTerm).toBeUndefined();
+  });
+});
