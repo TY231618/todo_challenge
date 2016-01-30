@@ -3,5 +3,5 @@ todoList.controller('TodoListController', function() {
 });
 
 var todos = {
-  'title': 'shower', 'done': false
+  'title': 'shower', 'done': false,
 }
