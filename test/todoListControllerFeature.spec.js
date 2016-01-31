@@ -17,5 +17,10 @@ describe('TodoListController', function() {
       ctrl.addTodo('set alarm');
       expect(ctrl.todos[0].title).toEqual("set alarm");
     });
+
+    it('new todos are not completed', function(){
+      ctrl.addTodo('set alarm');
+      expect(ctrl.todos[0].done).toEqual(false)
+    })
   });
 });
