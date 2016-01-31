@@ -58,4 +58,8 @@ todoList.controller('TodoListController', function() {
     return self.todos.length;
   }
 
+  self.clearAll = function() {
+    self.todos = [];
+    self.filteredTodoList = [];
+  }
 });

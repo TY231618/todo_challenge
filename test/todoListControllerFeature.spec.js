@@ -78,4 +78,20 @@ describe('TodoListController', function() {
       expect(ctrl.todos.length).toEqual(3);
     });
   });
+
+  describe('#clearAll', function () {
+    it('displays all todos', function () {
+      ctrl.addTodo('set alarm');
+      ctrl.addTodo('make breakfast');
+      ctrl.addTodo('go gym');
+      ctrl.todos[0].done = true;
+      ctrl.clearAll();
+      ctrl.activeTodo();
+      expect(ctrl.todos.length).toEqual(0);
+      ctrl.completedTodo();
+      expect(ctrl.todos.length).toEqual(0);
+      ctrl.allTodo();
+      expect(ctrl.todos.length).toEqual(0);
+    });
+  });
 });
