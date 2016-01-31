@@ -1,5 +1,14 @@
 body {
   text-align: center;
+  background-image: url(/Users/TY/Desktop/stickynote.jpg);
+}
+
+h2 {
+  font-family: Consolas, Sans-Serif;
+  width:800px;
+  margin:10px auto;
+  text-align:left;
+  padding:10px;
 }
 
 .done {

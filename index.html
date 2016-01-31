@@ -25,10 +25,13 @@
         <br>
         <button class="btn btn-success btn-xs"  ng-click="todoCtrl.addTodo(todoCtrl.newTodo)">Add Todo</button>
         <button class="btn btn-success btn-xs" ng-click="todoCtrl.removeTask()">Remove Todo</button>
+        <button class="btn btn-success btn-xs" ng-click="todoCtrl.completedTask()">Completed</button>
+
+
       </form>
 
-      <br>
-
+      <br><br>
+      <h2>My list of todos.....</h2>
       <ul ng-repeat="list in todoCtrl.todos">
         <li>
             <span ng-class="{'done': list.done}">{{list.title}}</span>
