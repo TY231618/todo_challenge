@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Todo List Challenge</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -12,14 +13,21 @@
 
   </head>
 
-  <body>
-    <div ng-controller="TodoListController as todo">
-      <form class="form-horizontal">
-        <input type="text" >
-        <button class="btn">Search</button>
+  <body ng-controller="TodoListController as todoCtrl">
+    <br>
+    <div class="center">
+      <form class="form-horizontal" name="frm" ng-submit="todoCtrl.addTodo(todolCtrl.newTodo)">
+        <input type="text" name="newTodo" ng-model="todolCtrl.newTodo" required/>
+        <br>
+        <button class="btn btn-success btn-xs"  ng-click="todolCtrl.addTodo(todolCtrl.newTodo)" ng-disabled="frm.$invalid">Add Todo</button>
       </form>
-      {{todo.list.title}} : {{todo.list.done}}
-
+      <br>
+      <ul ng-repeat="list in todoCtrl.todos">
+        <li>
+            <input type="checkbox" ng-model="list.done"/>
+            <span ng-class="{'done': list.done}">{{list.title}}</span>
+        </li>
+      </ul>
       <!-- <ul class="list-group">
         <li class="list-group-item">
           <img src="https://avatars.githubusercontent.com/u/469160?v=3&s=50">

@@ -1,7 +1,13 @@
 todoList.controller('TodoListController', function() {
-  this.list = todos;
-});
+  var self = this;
 
-var todos = {
-  'title': 'shower', 'done': false,
-}
+  self.todos = [];
+
+  self.addTodo = function(newTodo){
+    self.todos.push({'title': newTodo, 'done': false});
+  };
+
+  // self.addTask = function(taskname){
+  //     self.taskList.push({task: taskname, completed: false})
+  //   };
+});

@@ -11,4 +11,11 @@ describe('TodoListController', function() {
     expect(ctrl.searchResult).toBeUndefined();
     expect(ctrl.searchTerm).toBeUndefined();
   });
+
+  describe('new todo', function(){
+    it('adds a todo to a list', function(){
+      ctrl.addTodo('set alarm');
+      expect(ctrl.todos[0].title).toEqual("set alarm");
+    });
+  });
 });

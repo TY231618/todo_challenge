@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+}
+
+.done {
+  text-decoration: line-through; color: #ccc;
+}
+
+.center{
+  width:200px;
+  margin:0 auto;
+  text-align:left;
+}
