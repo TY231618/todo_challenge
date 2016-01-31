@@ -9,14 +9,15 @@ h2 {
   margin:10px auto;
   text-align:left;
   padding:10px;
+  padding-left: 400px;
 }
 
 .done {
   text-decoration: line-through; color: #ccc;
 }
 
-.center{
+/*.center{
   width:200px;
   margin:0 auto;
   text-align:left;
-}
+}*/
