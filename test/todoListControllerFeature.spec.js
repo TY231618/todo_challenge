@@ -43,4 +43,14 @@ describe('TodoListController', function() {
       expect(ctrl.todos.length).toEqual(1);
     });
   });
+
+  describe('#activeTask', function () {
+    it('displays all active tasks', function () {
+      ctrl.addTodo('set alarm');
+      ctrl.addTodo('make breakfast');
+      ctrl.todos[0].done = true;
+      ctrl.activeTask();
+      expect(ctrl.todos.length).toEqual(1);
+    });
+  });
 });
