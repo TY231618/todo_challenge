@@ -6,15 +6,15 @@ todoList.controller('TodoListController', function() {
   self.oldList = [];
 
   self.addTodo = function(newTodo){
-    self.filterAll();
+    self.allTodo();
     self.todos.push({title: newTodo, done: false});
     self.newTodo = '';
     self.filteredTodoList = self.todos;
 
   };
 
-  self.removeTask = function () {
-    self.filterAll();
+  self.removeTodo = function () {
+    self.allTodo();
     self.oldList  = self.todos;
     self.todos = [];
 
@@ -28,7 +28,7 @@ todoList.controller('TodoListController', function() {
 
   }
 
-  self.completedTask = function () {
+  self.completedTodo = function () {
     self.oldList = self.filteredTodoList;
     self.todos = [];
 
@@ -39,7 +39,7 @@ todoList.controller('TodoListController', function() {
    }
   }
 
-  self.activeTask = function () {
+  self.activeTodo = function () {
     self.oldList = self.filteredTodoList;
     self.todos = [];
 
@@ -50,8 +50,8 @@ todoList.controller('TodoListController', function() {
     }
   }
 
-  self.filterAll = function () {
-    self.taskList = self.filteredTodoList;
+  self.allTodo = function () {
+    self.todos = self.filteredTodoList;
   }
 
 

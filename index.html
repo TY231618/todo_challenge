@@ -24,9 +24,10 @@
         <input type="text" name="newTodo" ng-model="todoCtrl.newTodo" required/>
         <br>
         <button class="btn btn-success btn-xs"  ng-click="todoCtrl.addTodo(todoCtrl.newTodo)">Add Todo</button>
-        <button class="btn btn-success btn-xs" ng-click="todoCtrl.removeTask()">Remove Todo</button>
-        <button class="btn btn-success btn-xs" ng-click="todoCtrl.completedTask()">Completed</button>
-        <button class="btn btn-success btn-xs" ng-click="todoCtrl.activeTask()">Active</button>
+        <button class="btn btn-success btn-xs" ng-click="todoCtrl.removeTodo()">Remove Todo</button>
+        <button class="btn btn-success btn-xs" ng-click="todoCtrl.completedTodo()">Completed</button>
+        <button class="btn btn-success btn-xs" ng-click="todoCtrl.activeTodo()">Active</button>
+        <button class="btn btn-success btn-xs" ng-click="todoCtrl.allTodo()">All</button>
 
       </form>
 

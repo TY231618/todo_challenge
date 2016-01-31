@@ -25,31 +25,41 @@ describe('TodoListController', function() {
     })
   });
 
-  describe('#removeTask', function(){
+  describe('#removeTodo', function(){
     it('', function() {
       ctrl.addTodo('set alarm');
       ctrl.todos[0].done = true;
-      ctrl.removeTask();
+      ctrl.removeTodo();
       expect(ctrl.todos.length).toEqual(0);
     })
   })
 
-  describe('#completedTask', function () {
-    it('displays all completed tasks', function () {
+  describe('#completedTodo', function () {
+    it('displays all completed todos', function () {
       ctrl.addTodo('set alarm');
       ctrl.addTodo('make breakfast');
       ctrl.todos[0].done = true;
-      ctrl.completedTask();
+      ctrl.completedTodo();
       expect(ctrl.todos.length).toEqual(1);
     });
   });
 
-  describe('#activeTask', function () {
-    it('displays all active tasks', function () {
+  describe('#activeTodo', function () {
+    it('displays all active todos', function () {
       ctrl.addTodo('set alarm');
       ctrl.addTodo('make breakfast');
       ctrl.todos[0].done = true;
-      ctrl.activeTask();
+      ctrl.activeTodo();
+      expect(ctrl.todos.length).toEqual(1);
+    });
+  });
+
+  describe('#allTodo', function () {
+    it('displays all todos', function () {
+      ctrl.addTodo('set alarm');
+      ctrl.addTodo('make breakfast');
+      ctrl.todos[0].done = true;
+      ctrl.activeTodo();
       expect(ctrl.todos.length).toEqual(1);
     });
   });
