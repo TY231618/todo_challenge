@@ -24,4 +24,13 @@ describe('TodoListController', function() {
       expect(ctrl.todos[0].done).toEqual(false)
     })
   });
+
+  describe('#removeTask', function(){
+    it('', function() {
+      ctrl.addTodo('set alarm');
+      ctrl.todos[0].done = true;
+      ctrl.removeTask();
+      expect(ctrl.todos.length).toEqual(0);
+    })
+  })
 });

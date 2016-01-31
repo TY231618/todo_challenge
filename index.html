@@ -1,10 +1,14 @@
 <!doctype html>
 <html lang="en" ng-app="TodoList">
   <head>
+
     <meta charset="utf-8">
+
     <title>Todo List Challenge</title>
+
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -19,7 +23,8 @@
       <form class="form-horizontal" name="frm" ng-submit="todoCtrl.addTodo(todoCtrl.newTodo)">
         <input type="text" name="newTodo" ng-model="todoCtrl.newTodo" required/>
         <br>
-        <button class="btn btn-success btn-xs"  ng-click="todoCtrl.addTodo(todoCtrl.newTodo)" ng-disabled="frm.$invalid">Add Todo</button>
+        <button class="btn btn-success btn-xs"  ng-click="todoCtrl.addTodo(todoCtrl.newTodo)">Add Todo</button>
+        <button class="btn btn-success btn-xs" ng-click="todoCtrl.removeTask()">Remove Todo</button>
       </form>
 
       <br>
@@ -31,7 +36,6 @@
         </li>
       </ul>
 
-      <button class="btn btn-success btn-xs" ng-click="todoCtrl.clearList">Clear List</button>
 
     </div>
   </body>
