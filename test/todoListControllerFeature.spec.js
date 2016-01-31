@@ -15,6 +15,7 @@ describe('TodoListController', function() {
   describe('new todo', function(){
     it('adds a todo to a list', function(){
       ctrl.addTodo('set alarm');
+      expect(ctrl.newTodo).toEqual('');
       expect(ctrl.todos[0].title).toEqual("set alarm");
     });
 
