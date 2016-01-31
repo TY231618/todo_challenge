@@ -23,11 +23,11 @@
       <form class="form-horizontal" name="frm" ng-submit="todoCtrl.addTodo(todoCtrl.newTodo)">
         <input type="text" name="newTodo" ng-model="todoCtrl.newTodo" placeholder="Add a todo..." required/>
         <br><br>
-        <button class="btn btn-success btn-xs" ng-click="todoCtrl.allTodo()">All</button>
-        <button class="btn btn-success btn-xs" ng-click="todoCtrl.activeTodo()">Active</button>
-        <button class="btn btn-success btn-xs" ng-click="todoCtrl.completedTodo()">Completed</button>
+        <button class="btn btn-success btn-xs" ng-click="todoCtrl.allTodo()">View All</button>
+        <button class="btn btn-success btn-xs" ng-click="todoCtrl.activeTodo()">View Active</button>
+        <button class="btn btn-success btn-xs" ng-click="todoCtrl.completedTodo()">View Completed</button>
         <button class="btn btn-info btn-xs"  ng-click="todoCtrl.addTodo(todoCtrl.newTodo)">Add Todo</button>
-        <button class="btn btn-info btn-xs" ng-click="todoCtrl.removeTodo()">Remove Todo</button>
+        <button class="btn btn-info btn-xs" ng-click="todoCtrl.removeTodo()">Remove Completed Todo</button>
         <button class="btn btn-danger btn-xs" ng-click="todoCtrl.clearAll()">Clear List</button>
 
       </form>
