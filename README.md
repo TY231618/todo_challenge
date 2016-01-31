@@ -1,8 +1,11 @@
 # Makers Academy Weekend Challenge: Todo List
 
-Build a Todo list as a mini front-end application. You don't have to use a database, the front-end is more important - you can use an appropriate data structure stored somewhere in your JavaScript (this time only!)
+The task is to build a Todo list as a mini front-end application.  The main technologies used will be JavaScript, Angular, CSS and HTMl.  I will be using TDD to drive the production of the app.  
+
+Testing frameworks will include Karma for back-end and Protractor for front-end and user experience.
 
 Here are the core user stories:
+================
 
 ```
 As a forgetful person
@@ -29,3 +32,7 @@ As someone who has done lots of stuff
 I want to be able to clear my completed tasks
 So I never see them again
 ```
+
+# Screen Shot
+
+![myimage-alt-tag](/Users/TY/Desktop/todo-screenshot.png)

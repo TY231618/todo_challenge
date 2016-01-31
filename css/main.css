@@ -4,20 +4,29 @@ body {
 }
 
 h2 {
-  font-family: Consolas, Sans-Serif;
+  font-family: Sans-Serif;
   width:800px;
   margin:10px auto;
   text-align:left;
   padding:10px;
-  padding-left: 400px;
+  padding-left: 300px;
 }
 
 .done {
   text-decoration: line-through; color: #ccc;
 }
 
-/*.center{
+.center{
   width:200px;
   margin:0 auto;
   text-align:left;
-}*/
+}
+
+p {
+  position: fixed;
+  bottom: 200px;
+  right: 800px;
+  font-family: Sans-Serif;
+  text-decoration: underline;
+  font-weight: bold;
+}

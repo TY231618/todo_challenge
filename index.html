@@ -19,7 +19,7 @@
 
   <body ng-controller="TodoListController as todoCtrl">
     <br>
-    <div class="center">
+    <div>
       <form class="form-horizontal" name="frm" ng-submit="todoCtrl.addTodo(todoCtrl.newTodo)">
         <input type="text" name="newTodo" ng-model="todoCtrl.newTodo" placeholder="Add a todo..." required/>
         <br><br>
@@ -34,7 +34,7 @@
 
       <br><br>
       <h2>My list of todos.....</h2>
-      <ul ng-repeat="list in todoCtrl.todos">
+      <ul class="center" ng-repeat="list in todoCtrl.todos">
         <li>
             <span ng-class="{'done': list.done}">{{list.title}}</span>
             <input type="checkbox" ng-model="list.done"/>
