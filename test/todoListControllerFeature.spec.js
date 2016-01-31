@@ -63,4 +63,19 @@ describe('TodoListController', function() {
       expect(ctrl.todos.length).toEqual(1);
     });
   });
+
+  describe('#countTodo', function () {
+    it('displays number of todos for all, active and completed lists', function () {
+      ctrl.addTodo('set alarm');
+      ctrl.addTodo('make breakfast');
+      ctrl.addTodo('go gym');
+      ctrl.todos[0].done = true;
+      ctrl.activeTodo();
+      expect(ctrl.todos.length).toEqual(2);
+      ctrl.completedTodo();
+      expect(ctrl.todos.length).toEqual(1);
+      ctrl.allTodo();
+      expect(ctrl.todos.length).toEqual(3);
+    });
+  });
 });
